@@ -22,7 +22,7 @@ const Contact = ({name, avatar, isOnline}) => {
 }
 
 Contact.propTypes = {
-  isOnline: PropTypes.bool.isRequired,
+  isOnline: PropTypes.bool,
   name: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
 };

@@ -2,6 +2,12 @@ import React from "react";
 import "./App.css";
 import Contact from "./components/Contact.jsx";
 
+const contact = {
+  name: "Nate Pierson",
+  avatar: "https://randomuser.me/api/portraits/men/50.jpg",
+  isOnline: true
+};
+
 function App() {
   return (
     <div className="App">
@@ -22,6 +28,7 @@ function App() {
           avatar="https://randomuser.me/api/portraits/women/85.jpg"
           isOnline
         />
+        <Contact {...contact} />
       </header>
     </div>
   );
