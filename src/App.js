@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Contact from "./components/Contact.jsx";
 
@@ -8,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Contact />
-        <img src={logo} className="App-logo" alt="logo" />
+        <br />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
