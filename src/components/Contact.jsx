@@ -3,7 +3,7 @@ import './Contact.css';
 import PropTypes from 'prop-types';
 
 
-const Contact = ({name, avatar, isOnline}) => {
+const Contact = ({name, avatar, online}) => {
 
   return (
     <div className="Contact">
@@ -13,8 +13,8 @@ const Contact = ({name, avatar, isOnline}) => {
           {name}
         </h6>
         <div className="status">
-          {isOnline ? <span className="status-online"></span> : <span className="status-offline"></span>}
-          <span className="status-text">{isOnline ? 'online' : 'offline'}</span>
+        <span className={online ? "status-online" : "status-offline"}></span>
+          <span className="status-text">{online ? 'online' : 'offline'}</span>
         </div>
       </div>
     </div>
@@ -22,7 +22,7 @@ const Contact = ({name, avatar, isOnline}) => {
 }
 
 Contact.propTypes = {
-  isOnline: PropTypes.bool,
+  online: PropTypes.bool,
   name: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
 };
