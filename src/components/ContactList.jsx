@@ -34,7 +34,7 @@ return (
 <div> 
   {users.map(user => {
   return (
-  <Contact {...user} />
+  <Contact {...user} key={user.name} />
   )})} 
 </div>)}
 
