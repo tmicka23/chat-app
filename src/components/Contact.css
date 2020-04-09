@@ -29,6 +29,10 @@
 }
 
 /* Status (rounded&colored indicator) */
+
+.Contact .status {
+  cursor: pointer;
+}
 .Contact .status .status-online,
 .Contact .status .status-offline {
   display: inline-block;
