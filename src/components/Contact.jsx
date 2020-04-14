@@ -31,21 +31,23 @@ class Contact extends React.Component {
   }
 
   handleStatus = (event) => {
-    const newStatus = this.state.online ? false : true
-    this.setState({online: newStatus})
+    const online = this.state.online ? false : true
+    this.setState({online})
   }
 
   render() {
+    const {avatar, name} = this.props
+    const {online} = this.state
     return (
       <div className="Contact">
-       <img src={this.props.avatar} alt={this.props.name} className="avatar"/>
+       <img src={avatar} alt={name} className="avatar"/>
        <div>
          <h6 className="name">
-           {this.props.name}
+           {name}
          </h6>
          <div className="status" id="statusContainer" onClick={this.handleStatus}>
-         <span className={this.state.online ? "status-online" : "status-offline"}></span>
-           <span className="status-text">{this.state.online ? 'online' : 'offline'}</span>
+         <span className={online ? "status-online" : "status-offline"}></span>
+           <span className="status-text">{online ? 'online' : 'offline'}</span>
          </div>
        </div>
      </div>
